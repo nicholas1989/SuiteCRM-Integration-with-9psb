@@ -1,0 +1,27 @@
+<?php
+// created: 2022-02-17 08:12:33
+$mod_strings = array (
+  'LNK_NEW_LEAD' => 'Create Twitter',
+  'LNK_LEAD_LIST' => 'View Twitters',
+  'LNK_IMPORT_VCARD' => 'Create Twitter From vCard',
+  'LNK_IMPORT_LEADS' => 'Import Twitters',
+  'LBL_LIST_FORM_TITLE' => 'Twitter List',
+  'LBL_SEARCH_FORM_TITLE' => 'Twitter Search',
+  'LBL_REPORTS_TO' => 'Reports To:',
+  'LBL_CONTACTS' => 'Agents',
+  'LBL_ACCOUNT' => 'Contact',
+  'LBL_LEADS' => 'Leads',
+  'LBL_LIST_MY_LEADS' => 'My Twitters',
+  'LBL_CONTACT_ID' => 'Agent ID',
+  'LBL_CONVERTED_CONTACT' => 'Converted Agent:',
+  'LBL_ACCOUNT_DESCRIPTION' => 'Contact Description',
+  'LBL_ACCOUNT_ID' => 'Contact ID',
+  'LBL_ACCOUNT_NAME' => 'Contact Name:',
+  'LBL_LIST_ACCOUNT_NAME' => 'Contact Name',
+  'LBL_CONVERTED_ACCOUNT' => 'Converted Contact:',
+  'LNK_SELECT_ACCOUNTS' => ' OR Select Contact',
+  'LNK_NEW_ACCOUNT' => 'Create Contact',
+  'LBL_LEAD_SOURCE' => 'Twitter Source:',
+  'LBL_LEAD_SOURCE_DESCRIPTION' => 'Twitter Source Description:',
+  'LBL_MODULE_NAME' => 'Twitters',
+);
