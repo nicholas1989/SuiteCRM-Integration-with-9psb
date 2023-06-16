@@ -1,195 +1,212 @@
 <?php
-// created: 2022-12-31 21:38:42
-$viewdefs['Cases']['DetailView'] = array (
-  'templateMeta' => 
+$viewdefs ['Cases'] = 
+array (
+  'DetailView' => 
   array (
-    'form' => 
+    'templateMeta' => 
     array (
-      'buttons' => 
+      'form' => 
       array (
-        0 => 'EDIT',
-        1 => 'DUPLICATE',
-        2 => 'DELETE',
-        3 => 'FIND_DUPLICATES',
+        'buttons' => 
+        array (
+          0 => 'EDIT',
+          1 => 'DUPLICATE',
+          2 => 'DELETE',
+          3 => 'FIND_DUPLICATES',
+        ),
       ),
+      'maxColumns' => '2',
+      'widths' => 
+      array (
+        0 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+        1 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+      ),
+      'useTabs' => true,
+      'tabDefs' => 
+      array (
+        'LBL_CASE_INFORMATION' => 
+        array (
+          'newTab' => true,
+          'panelDefault' => 'expanded',
+        ),
+        'LBL_EDITVIEW_PANEL1' => 
+        array (
+          'newTab' => true,
+          'panelDefault' => 'expanded',
+        ),
+      ),
+      'syncDetailEditViews' => true,
     ),
-    'maxColumns' => '2',
-    'widths' => 
+    'panels' => 
     array (
-      0 => 
-      array (
-        'label' => '10',
-        'field' => '30',
-      ),
-      1 => 
-      array (
-        'label' => '10',
-        'field' => '30',
-      ),
-    ),
-    'useTabs' => false,
-    'tabDefs' => 
-    array (
-      'LBL_CASE_INFORMATION' => 
-      array (
-        'newTab' => false,
-        'panelDefault' => 'expanded',
-      ),
-    ),
-    'syncDetailEditViews' => true,
-  ),
-  'panels' => 
-  array (
-    'lbl_case_information' => 
-    array (
-      0 => 
+      'lbl_case_information' => 
       array (
         0 => 
         array (
-          'name' => 'name',
-          'label' => 'LBL_SUBJECT',
-        ),
-        1 => 'priority',
-      ),
-      1 => 
-      array (
-        0 => 
-        array (
-          'name' => 'state',
-          'comment' => 'The state of the case (i.e. open/closed)',
-          'label' => 'LBL_STATE',
-        ),
-        1 => 'status',
-      ),
-      2 => 
-      array (
-        0 => 
-        array (
-          'name' => 'service_chanel_c',
-          'studio' => 'visible',
-          'label' => 'LBL_SERVICE_CHANEL',
+          0 => 
+          array (
+            'name' => 'name',
+            'label' => 'LBL_SUBJECT',
+          ),
+          1 => 'priority',
         ),
         1 => 
         array (
-          'name' => 'escalate_c',
-          'studio' => 'visible',
-          'label' => 'LBL_ESCALATE',
+          0 => 
+          array (
+            'name' => 'state',
+            'comment' => 'The state of the case (i.e. open/closed)',
+            'label' => 'LBL_STATE',
+          ),
+          1 => 'status',
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'service_chanel_c',
+            'studio' => 'visible',
+            'label' => 'LBL_SERVICE_CHANEL',
+          ),
+          1 => 
+          array (
+            'name' => 'escalate_c',
+            'studio' => 'visible',
+            'label' => 'LBL_ESCALATE',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'service_interest_c',
+            'studio' => 'visible',
+            'label' => 'LBL_SERVICE_INTEREST',
+          ),
+          1 => 
+          array (
+            'name' => 'product_type_c',
+            'studio' => 'visible',
+            'label' => 'LBL_PRODUCT_TYPE',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'cat_c',
+            'studio' => 'visible',
+            'label' => 'LBL_CAT',
+          ),
+          1 => 
+          array (
+            'name' => 'subcategory_c',
+            'studio' => 'visible',
+            'label' => 'LBL_SUBCATEGORY',
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'source',
+            'label' => 'LBL_SOURCE',
+          ),
+          1 => 
+          array (
+            'name' => 'service_persona_c',
+            'studio' => 'visible',
+            'label' => 'LBL_SERVICE_PERSONA',
+          ),
+        ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'agent_outlet_c',
+            'studio' => 'visible',
+            'label' => 'LBL_AGENT_OUTLET',
+          ),
+          1 => 
+          array (
+            'name' => 'amount_disput_c',
+            'label' => 'LBL_AMOUNT_DISPUT',
+          ),
+        ),
+        7 => 
+        array (
+          0 => 'account_name',
+          1 => 
+          array (
+            'name' => 'assigned_user_name',
+            'label' => 'LBL_ASSIGNED_TO',
+          ),
+        ),
+        8 => 
+        array (
+          0 => 
+          array (
+            'name' => 'choose_file_c',
+            'studio' => 'visible',
+            'label' => 'LBL_CHOOSE_FILE',
+          ),
+          1 => '',
+        ),
+        9 => 
+        array (
+          0 => 'description',
+        ),
+        10 => 
+        array (
+          0 => 'resolution',
+          1 => 
+          array (
+            'name' => 'update_info_c',
+            'studio' => 'visible',
+            'label' => 'LBL_UPDATE_INFO',
+          ),
+        ),
+        11 => 
+        array (
+          0 => 
+          array (
+            'name' => 'created_by_name',
+            'label' => 'LBL_CREATED',
+          ),
+          1 => 
+          array (
+            'name' => 'date_entered',
+            'label' => 'LBL_CREATED',
+          ),
         ),
       ),
-      3 => 
+      'lbl_editview_panel1' => 
       array (
         0 => 
         array (
-          'name' => 'service_interest_c',
-          'studio' => 'visible',
-          'label' => 'LBL_SERVICE_INTEREST',
-        ),
-        1 => 
-        array (
-          'name' => 'product_type_c',
-          'studio' => 'visible',
-          'label' => 'LBL_PRODUCT_TYPE',
-        ),
-      ),
-      4 => 
-      array (
-        0 => 
-        array (
-          'name' => 'cat_c',
-          'studio' => 'visible',
-          'label' => 'LBL_CAT',
-        ),
-        1 => 
-        array (
-          'name' => 'subcategory_c',
-          'studio' => 'visible',
-          'label' => 'LBL_SUBCATEGORY',
-        ),
-      ),
-      5 => 
-      array (
-        0 => 
-        array (
-          'name' => 'source',
-          'label' => 'LBL_SOURCE',
-        ),
-        1 => 
-        array (
-          'name' => 'service_persona_c',
-          'studio' => 'visible',
-          'label' => 'LBL_SERVICE_PERSONA',
-        ),
-      ),
-      6 => 
-      array (
-        0 => 
-        array (
-          'name' => 'agent_outlet_c',
-          'studio' => 'visible',
-          'label' => 'LBL_AGENT_OUTLET',
-        ),
-        1 => 
-        array (
-          'name' => 'amount_disput_c',
-          'label' => 'LBL_AMOUNT_DISPUT',
-        ),
-      ),
-      7 => 
-      array (
-        0 => 'account_name',
-        1 => 
-        array (
-          'name' => 'assigned_user_name',
-          'label' => 'LBL_ASSIGNED_TO',
-        ),
-      ),
-      8 => 
-      array (
-        0 => 
-        array (
-          'name' => 'upload_c',
-          'studio' => 'visible',
-          'label' => 'LBL_UPLOAD',
-        ),
-        1 => 
-        array (
-          'name' => 'sec_upload_c',
-          'studio' => 'visible',
-          'label' => 'LBL_SEC_UPLOAD',
-        ),
-      ),
-      9 => 
-      array (
-        0 => 
-        array (
-          'name' => 'filename',
-          'comment' => 'File name associated with the note (attachment)',
-          'label' => 'LBL_FILENAME',
-        ),
-        1 => '',
-      ),
-      10 => 
-      array (
-        0 => 'description',
-      ),
-      11 => 
-      array (
-        0 => 'resolution',
-        1 => 
-        array (
-          'name' => 'update_info_c',
-          'studio' => 'visible',
-          'label' => 'LBL_UPDATE_INFO',
-        ),
-      ),
-      12 => 
-      array (
-        0 => 
-        array (
-          'name' => 'date_entered',
-          'label' => 'LBL_CREATED',
+          0 => 
+          array (
+            'name' => 'email_source_c',
+            'studio' => 'visible',
+            'label' => 'LBL_EMAIL_SOURCE',
+          ),
+          1 => 
+          array (
+            'name' => 'source_email_c',
+            'label' => 'LBL_SOURCE_EMAIL',
+          ),
         ),
       ),
     ),
   ),
 );
+;
+?>

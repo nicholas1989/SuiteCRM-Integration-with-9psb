@@ -1439,20 +1439,6 @@ $GLOBALS['app_list_strings']['service_interest_c_list']=array (
   'Request' => 'Request',
   'Suggestion' => 'Suggestion',
 );
-$GLOBALS['app_list_strings']['escalate_list']=array (
-  '' => '',
-  'esettlement' => 'E-SETTLEMENT',
-  'second_esettlement' => '2nd LEVEL E-SETTLEMENT',
-  'digital' => 'DIGITAL BANKING & ONLINE CHANNELS',
-  'second_digital' => '2nd LEVEL DIGITAL BANKING',
-  'sales' => 'SALES & DISTRIBUTION',
-  'second_sales' => '2nd LEVEL SALES & DIST',
-  'product' => 'PRODUCT',
-  'second_product' => '2nd LEVEL PRODUCT',
-  'technology' => 'TECHNOLOGY',
-  'second_technology' => '2nd LEVEL  TECHNOLOGY',
-  'escalate' => '3rd Level Escalation',
-);
 $GLOBALS['app_list_strings']['case_status_dom']=array (
   'Open_New' => 'New',
   'Closed_Closed' => 'Closed',
@@ -4315,10 +4301,32 @@ $GLOBALS['app_list_strings']['source_list']=array (
 
 $GLOBALS['app_list_strings']['email_source_list']=array (
   '' => '',
-  'Hello' => 'Hello@9psb.com.ng ',
-  'Partner' => 'Partnersupport@9psb.com.ng',
+  'hello@9psb.com.ng' => 'Hello@9psb.com.ng',
+  'Partnersupport@9psb.com.ng' => 'Partnersupport@9psb.com.ng',
 );
 $app_list_strings['moduleList']['AOR_Reports']='Reports';
 $app_list_strings['moduleList']['rls_Reports']='Past_Reports';
 $app_list_strings['moduleListSingular']['AOR_Reports']='Report';
 $app_list_strings['moduleListSingular']['rls_Reports']='Past_Report';
+$app_list_strings['escalate_list']=array (
+  '' => '',
+  'esettlement' => 'E-SETTLEMENT',
+  'second_esettlement' => '2nd LEVEL E-SETTLEMENT',
+  'digital' => 'DIGITAL BANKING & ONLINE CHANNELS',
+  'second_digital' => '2nd LEVEL DIGITAL BANKING',
+  'sales' => 'SALES & DISTRIBUTION',
+  'second_sales' => '2nd LEVEL SALES & DIST',
+  'product' => 'PRODUCT',
+  'second_product' => '2nd LEVEL PRODUCT',
+  'technology' => 'TECHNOLOGY',
+  'second_technology' => '2nd LEVEL  TECHNOLOGY',
+  'escalate' => '3rd Level Escalation',
+  'onboarding' => 'ONBOARDING',
+  'second_onboarding' => '2nd LEVEL ONBOARDING',
+);
+
+$app_list_strings['email_source_0']=array (
+  '' => '',
+  'Partnersupport@9psb.com.ng' => 'partnersupport@9psb.com.ng',
+  'hello@9psb.com.ng' => 'hello@9psb.com.ng',
+);

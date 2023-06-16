@@ -927,7 +927,7 @@ class SugarBean
                     $query = ' UNION ALL ( ' . $query . ' )';
                     $final_query_rows .= " UNION ALL ";
                 } else {
-                    $query = '(' . $query . ')';
+                    //$query = '(' . $query . ')';
                     $first = false;
                 }
                 $query_array = $subquery['query_array'];

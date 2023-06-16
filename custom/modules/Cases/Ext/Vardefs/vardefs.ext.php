@@ -56,6 +56,12 @@ $dictionary['Case']['fields']['jjwg_maps_lng_c']['inline_edit']=1;
 
  
 
+ // created: 2023-03-15 11:51:01
+$dictionary['Case']['fields']['choose_file_c']['inline_edit']='1';
+$dictionary['Case']['fields']['choose_file_c']['labelValue']='Choose File';
+
+ 
+
  // created: 2022-07-22 14:20:56
 $dictionary['Case']['fields']['save_question_c']['inline_edit']='1';
 $dictionary['Case']['fields']['save_question_c']['labelValue']='Save Question';
@@ -64,6 +70,12 @@ $dictionary['Case']['fields']['save_question_c']['labelValue']='Save Question';
 
  // created: 2022-02-17 09:20:17
 $dictionary['Case']['fields']['contact_id_c']['inline_edit']=1;
+
+ 
+
+ // created: 2023-03-27 14:49:26
+$dictionary['Case']['fields']['source_email_c']['inline_edit']='1';
+$dictionary['Case']['fields']['source_email_c']['labelValue']='Source Email';
 
  
 
@@ -79,7 +91,7 @@ $dictionary['Case']['fields']['upload_c']['labelValue']='Upload Image';
 
  
 
- // created: 2022-03-17 13:16:09
+ // created: 2023-02-20 08:16:52
 $dictionary['Case']['fields']['escalate_c']['inline_edit']='1';
 $dictionary['Case']['fields']['escalate_c']['labelValue']='Escalate To';
 
@@ -94,6 +106,12 @@ $dictionary['Case']['fields']['service_interest_c']['labelValue']='Service of In
  // created: 2022-03-14 12:22:35
 $dictionary['Case']['fields']['service_chanel_c']['inline_edit']='1';
 $dictionary['Case']['fields']['service_chanel_c']['labelValue']='Service  Channel';
+
+ 
+
+ // created: 2023-03-26 09:06:08
+$dictionary['Case']['fields']['email_source_c']['inline_edit']='1';
+$dictionary['Case']['fields']['email_source_c']['labelValue']='Email Source';
 
  
 

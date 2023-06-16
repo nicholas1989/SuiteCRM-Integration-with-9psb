@@ -32,6 +32,13 @@ array (
     'default' => true,
     'sortable' => false,
   ),
+  'STATUS' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_STATUS',
+    'width' => '10%',
+    'default' => true,
+  ),
   'DATE_ENTERED' => 
   array (
     'width' => '32%',

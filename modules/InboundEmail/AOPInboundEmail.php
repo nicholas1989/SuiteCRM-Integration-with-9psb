@@ -105,7 +105,9 @@ class AOPInboundEmail extends InboundEmail
             if (!empty($contactIds)) {
                 $c->contact_created_by_id = $contactIds[0];
             }
-
+	    
+	    $c->email_source_c = $email->to_addrs_names;
+	    $c->source_email_c = $email->to_addrs;
             $c->save(true);
             $c->retrieve($c->id);
             if ($c->load_relationship('emails')) {

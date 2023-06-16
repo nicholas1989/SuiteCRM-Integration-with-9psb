@@ -1,23 +1,33 @@
 <?php
-// created: 2022-12-31 21:39:09
-$searchdefs['Cases'] = array (
+$searchdefs ['Cases'] = 
+array (
   'layout' => 
   array (
     'basic_search' => 
     array (
-      0 => 
+      'name' => 
       array (
         'name' => 'name',
         'default' => true,
         'width' => '10%',
       ),
-      1 => 
+      'date_entered' => 
       array (
-        'name' => 'case_number',
-        'default' => true,
+        'type' => 'datetime',
+        'label' => 'LBL_DATE_ENTERED',
         'width' => '10%',
+        'default' => true,
+        'name' => 'date_entered',
       ),
-      2 => 
+      'created_by' => 
+      array (
+        'type' => 'assigned_user_name',
+        'label' => 'LBL_CREATED',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'created_by',
+      ),
+      'open_only' => 
       array (
         'name' => 'open_only',
         'label' => 'LBL_OPEN_ITEMS',
@@ -103,3 +113,5 @@ $searchdefs['Cases'] = array (
     ),
   ),
 );
+;
+?>

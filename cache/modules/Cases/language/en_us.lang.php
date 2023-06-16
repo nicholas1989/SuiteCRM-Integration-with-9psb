@@ -1,5 +1,5 @@
 <?php
-// created: 2023-02-15 17:01:02
+// created: 2023-05-24 15:00:36
 $mod_strings = array (
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Date Created:',
@@ -124,4 +124,8 @@ $mod_strings = array (
   'LBL_SEC_UPLOAD' => 'Second Upload',
   'LBL_SAVE_QUESTION' => 'Save Question',
   'LBL_FILENAME' => 'Attachment',
+  'LBL_CHOOSE_FILE' => 'Choose File',
+  'LBL_EMAIL_SOURCE' => 'Email Source',
+  'LBL_EDITVIEW_PANEL1' => '_',
+  'LBL_SOURCE_EMAIL' => 'Source Email',
 );
