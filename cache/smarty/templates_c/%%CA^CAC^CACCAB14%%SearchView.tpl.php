@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2023-05-24 15:08:49
+<?php /* Smarty version 2.6.33, created on 2023-06-20 09:07:05
          compiled from include/SugarFields/Fields/Enum/SearchView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'include/SugarFields/Fields/Enum/SearchView.tpl', 42, false),array('function', 'sugarvar', 'include/SugarFields/Fields/Enum/SearchView.tpl', 43, false),)), $this); ?>
@@ -50,4 +50,4 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '
 []' options=<?php echo smarty_function_sugarvar(array('key' => 'options','string' => true), $this);?>
  size="<?php echo $this->_tpl_vars['size']; ?>
 " class="templateGroupChooser" <?php if ($this->_tpl_vars['size'] > 1): ?>multiple="1"<?php endif; ?> selected=<?php echo smarty_function_sugarvar(array('key' => 'value','string' => true), $this);?>
-}
+}

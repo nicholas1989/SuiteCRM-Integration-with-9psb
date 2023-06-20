@@ -1,101 +1,38 @@
 <?php
+    // $mobile = "0".$_REQUEST['phone'];
 
- $phone  = (isset($_REQUEST)) ?  $_REQUEST['ANI'] : "";
-// $phone = "07030044000";
- 
+    $mobile = $_REQUEST['ANI'];
+    // $mobile = substr($mobile, 1); 
+    // $mobile = $mobile; 
+try{ 
+    $pdo = new PDO("mysql:host=localhost; 
+                    dbname=db_psb", "root", "Password123"); 
+    $pdo->setAttribute(PDO::ATTR_ERRMODE,  
+                        PDO::ERRMODE_EXCEPTION); 
+} catch(PDOException $e){ 
+    die("ERROR: Could not connect. "  
+                    . $e->getMessage()); 
+} 
+  
+try{ 
 
-// var_dump($_REQUEST);
+        $res = $pdo->prepare("SELECT id FROM accounts WHERE phone_office= :mobile LIMIT 1");
+        $res->bindParam(':mobile', $mobile);
+        $res->execute(); 
 
-$url = "https://psbcrm.interranetworks.com/psbcrm/service/v4_1/rest.php";
-$username = "rita";
-$password = "Password123";
+        if ($res->rowCount() > 0) {
+            $row = $res->fetch();
+    //    var_dump($row);die();
+            header("Location: http://localhost/psb/index.php?module=Accounts&action=DetailView&record=".$row['id']);
+            unset($res); 
+    }else{
+            header("Location: http://localhost/psb/index.php?module=Accounts&action=EditView&phone_office=".$mobile);
+    }
 
-function call($method, $parameters, $url)
-{
-  ob_start();
-  $curl_request = curl_init();
-
-
-  curl_setopt($curl_request, CURLOPT_URL, $url);
-  curl_setopt($curl_request, CURLOPT_POST, 1);
-  curl_setopt($curl_request, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_0);
-  curl_setopt($curl_request, CURLOPT_HEADER, 1);
-  curl_setopt($curl_request, CURLOPT_SSL_VERIFYPEER, 0);
-  curl_setopt($curl_request, CURLOPT_RETURNTRANSFER, 1);
-  curl_setopt($curl_request, CURLOPT_FOLLOWLOCATION, 0);
-
-
-  $jsonEncodedData = json_encode($parameters);
-
-
-
-  $post = array(
-   "method" => $method,
-   "input_type" => "JSON",
-   "response_type" => "JSON",
-   "rest_data" => $jsonEncodedData
-   );
-
-  curl_setopt($curl_request, CURLOPT_POSTFIELDS, $post);
-
-  $result = curl_exec($curl_request);
-  var_dump( $post );
-  die();
-
-  curl_close($curl_request);
-
-  $result = explode("\r\n\r\n", $result, 2);
-  $response = json_decode($result[1]);
-  ob_end_flush();
-
-
-  return $response;
-}
-    //login ----------------------------------------- 
-$login_parameters = array(
- "user_auth" => array(
-  "user_name" => $username,
-  "password" => md5($password),
-  "version" => "1"
-  ),
- "application_name" => "RestTest",
- "name_value_list" => array(),
- );
-
-$login_result = call("login", $login_parameters, $url);
-// var_dump($login_result); die();
-
-    //get session id
-$session_id = $login_result->id;
-// var_dump($session_id); die();
-$search_by_module_parameters = array(  
-  "session" => $session_id,  
-  'search_string' => $phone,  
-  'modules' => array(  
-    'Accounts',  
-  ),
-  'offset' => 0,  
-  'max_results' => 1,  
-  'assigned_user_id' => '',  
-  'select_fields' => array('id'),  
-  'unified_search_only' => false,  
-  'favorites' => false  
-  );  
-
-$search_by_module_results = call('search_by_module', $search_by_module_parameters, $url);  
-// var_dump($search_by_module_results);die();
-
-$val = $search_by_module_results->entry_list['0']->records['0']->id->value;
-// echo '<pre>';  
-  // print_r($val);  
-  // echo '</pre>';  
-// var_dump($val);die();
-if (!empty($val)) {
-   
-  header("Location: https://psbcrm.interranetworks.com/psbcrm/index.php?module=Accounts&action=DetailView&record=".$val);  
-}
-else {
-  header("Location: https://psbcrm.interranetworks.com/psbcrm/index.php?module=Accounts&action=EditView&return_module=Accounts&return_action=index&phone_office=".$phone);  
-}
-?>
+} catch(PDOException $e){ 
+    die("ERROR: Could not able to execute $sql. "  
+                                   . $e->getMessage()); 
+} 
+unset($pdo); 
+?> 
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2023-05-24 15:09:36
+<?php /* Smarty version 2.6.33, created on 2023-06-20 09:07:20
          compiled from custom/themes/SuiteP/include/ListView/ListViewPaginationTop.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_action_menu', 'custom/themes/SuiteP/include/ListView/ListViewPaginationTop.tpl', 74, false),)), $this); ?>
@@ -146,4 +146,4 @@ unset($_smarty_tpl_vars);
 				</tr>
 			</table>
 		</td>
-	</tr>
+	</tr>

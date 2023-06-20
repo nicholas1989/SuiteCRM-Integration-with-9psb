@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2023-05-24 15:01:04
+<?php /* Smarty version 2.6.33, created on 2023-06-19 14:52:12
          compiled from custom/themes/SuiteP/tpls/_headerModuleList.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_link', 'custom/themes/SuiteP/tpls/_headerModuleList.tpl', 58, false),array('function', 'sugar_translate', 'custom/themes/SuiteP/tpls/_headerModuleList.tpl', 114, false),array('function', 'suite_check_access', 'custom/themes/SuiteP/tpls/_headerModuleList.tpl', 120, false),array('function', 'counter', 'custom/themes/SuiteP/tpls/_headerModuleList.tpl', 213, false),array('modifier', 'lower', 'custom/themes/SuiteP/tpls/_headerModuleList.tpl', 117, false),array('modifier', 'replace', 'custom/themes/SuiteP/tpls/_headerModuleList.tpl', 117, false),array('modifier', 'default', 'custom/themes/SuiteP/tpls/_headerModuleList.tpl', 770, false),)), $this); ?>
@@ -1114,4 +1114,4 @@ if ($this->_foreach['lastViewed']['total'] > 0):
     </div>
     <!--End Responsive Sidebar -->
 <?php endif; ?>
-<!--Start Page content -->
+<!--Start Page content -->
