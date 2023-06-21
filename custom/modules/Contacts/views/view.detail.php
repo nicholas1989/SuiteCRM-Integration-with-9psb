@@ -7,7 +7,7 @@ class CustomContactsViewDetail extends ContactsViewDetail
 {
 
 
-    static function fetchCustomerDetail($token){
+    static function fetchAgentDetail($token){
 
 
         if(isset($_GET['record'])){
@@ -16,9 +16,11 @@ class CustomContactsViewDetail extends ContactsViewDetail
             $bean = BeanFactory::getBean('Contacts', $userId);
             $phone_number = $bean->phone_mobile;
 
+            // var_dump($phone_number);
+
 
             $ch = curl_init();
-            $customer_details_url = 'http://102.216.128.75:9090/customer-account-details/api/v1/customer-details';
+            $agent_details_url = 'http://102.216.128.75:9090/customer-account-details/api/v1/agent-details';
         
             // $accountNo = '06630381010001142'; // Test_Phone_number: 07037415745; test_accountNo: 06630381010001142
         
@@ -36,7 +38,7 @@ class CustomContactsViewDetail extends ContactsViewDetail
             // exit;
         
             curl_setopt_array($ch, [
-                CURLOPT_URL => $customer_details_url,
+                CURLOPT_URL => $agent_details_url,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_CUSTOMREQUEST => 'POST',
                 CURLOPT_HTTPHEADER => $headers,
@@ -93,7 +95,7 @@ class CustomContactsViewDetail extends ContactsViewDetail
     
         $write_to_file = file_put_contents('./token.txt', $response->jwttoken);
         if($write_to_file){
-           return self::fetchCustomerDetail($response->jwttoken);
+           return self::fetchAgentDetail($response->jwttoken);
         }else{
             var_dump('Token auto-generating failed.');
         }
@@ -105,10 +107,10 @@ class CustomContactsViewDetail extends ContactsViewDetail
         parent::display();
 
 
-        $customer = self::generateAuthToken();
+        $agent = self::generateAuthToken();
         $template = '';
         // var_dump($customer->lastFiveTransactions);
-        // var_dump($customer);
+        // var_dump($agent);
 
         $template .= '
             <div class="custom-card-container">
@@ -117,42 +119,42 @@ class CustomContactsViewDetail extends ContactsViewDetail
             </div>
         ';
 
-        if($customer->status != 'Failed'){
+        if($agent->status != 'failed'){
 
             $template .='
             <div class="custom-row">
                 <div class="custom-inner-card-container">
                     <div class="custom-inner-row">
-                        <label>Full Name: </label><p class="custom-paragraph">'.$customer->fullName.'</p>
+                        <label>Full Name: </label><p class="custom-paragraph">'.$agent->fullName.'</p>
                     </div>
                     <div class="custom-inner-row">
-                        <label>Mobile Number: </label><p class="custom-paragraph">'.$customer->mobileNumber.'</p>
+                        <label>Mobile Number: </label><p class="custom-paragraph">'.$agent->mobileNumber.'</p>
                     </div>
                 </div>
                 <div class="custom-inner-card-container">
                     <div class="custom-inner-row">
-                        <label>Account Number: </label> <p class="custom-paragraph">'.$customer->customerAccountNumber.'</p>
+                        <label>Account Number: </label> <p class="custom-paragraph">'.$agent->agentAccountNumber.'</p>
                     </div>
                     <div class="custom-inner-row">
-                        <label>D.O.B: </label><p class="custom-paragraph">'.$customer->dateOfBirth.'</p>
+                        <label>D.O.B: </label><p class="custom-paragraph">'.$agent->dateOfBirth.'</p>
                     </div>
                 </div>
             </div>
             <div class="custom-row">
                 <div class="custom-inner-card-container">
                     <div class="custom-inner-row">
-                        <label>BVN: </label><p class="custom-paragraph">'.$customer->bvn.'</p>
+                        <label>BVN: </label><p class="custom-paragraph">'.$agent->bvn.'</p>
                     </div>
                     <div class="custom-inner-row">
-                        <label>Account Officer: </label><p class="custom-paragraph">'.$customer->accountOfficer.'</p>
+                        <label>Account Officer: </label><p class="custom-paragraph">'.$agent->accountOfficer.'</p>
                     </div>
                 </div>
                 <div class="custom-inner-card-container">
                     <div class="custom-inner-row">
-                        <label>Email Address: </label> <p class="custom-paragraph">'.$customer->emailAddress.'</p>
+                        <label>Email Address: </label> <p class="custom-paragraph">'.$agent->emailAddress.'</p>
                     </div>
                     <div class="custom-inner-row">
-                        <label>Account Status: </label><p class="custom-paragraph">'.$customer->accountStatus.'</p>
+                        <label>Account Status: </label><p class="custom-paragraph">'.$agent->accountStatus.'</p>
                     </div>
                 </div>
             </div>
@@ -160,7 +162,7 @@ class CustomContactsViewDetail extends ContactsViewDetail
                 <div class="custom-inner-card-container">
                     <div class="custom-inner-row">
                         <label>Residential Address: </label><p class="custom-paragraph">
-                            '.$customer->residentialAddress.'.
+                            '.$agent->residentialAddress.'.
                         </p>
                     </div>
                 </div>
@@ -168,7 +170,7 @@ class CustomContactsViewDetail extends ContactsViewDetail
             <div class="custom-card-header">
                 <h3>Last Five(5) Transactions</h3>
             </div>';
-            foreach ($customer->lastFiveTransactions as $transaction) 
+            foreach ($agent->lastFiveTransactions as $transaction) 
             {
                 // var_dump($transaction->balance);
                 $template .='
@@ -257,7 +259,7 @@ class CustomContactsViewDetail extends ContactsViewDetail
             }
 
         }else{
-            $template .= '<h3 class="custom-error-text">'.$customer->message.'</h3>';
+            $template .= '<h3 class="custom-error-text">'.$agent->message.'</h3>';
         }
 
         $template .= '</div>';
