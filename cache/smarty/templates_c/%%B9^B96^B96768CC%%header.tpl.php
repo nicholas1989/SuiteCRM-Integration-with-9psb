@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2023-05-24 15:01:04
+<?php /* Smarty version 2.6.33, created on 2023-06-20 09:19:15
          compiled from custom/themes/SuiteP/tpls/header.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'custom/themes/SuiteP/tpls/header.tpl', 63, false),)), $this); ?>
@@ -36,4 +36,4 @@ unset($_smarty_tpl_vars);
      class="<?php if ($this->_tpl_vars['THEME_CONFIG']['display_sidebar'] && ((is_array($_tmp=@$_COOKIE['sidebartoggle'])) ? $this->_run_mod_handler('default', true, $_tmp, '') : smarty_modifier_default($_tmp, '')) != 'collapsed'): ?>col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2<?php endif; ?> main bootstrap-container">
     <div id="content" class="content">
         <div id="pagecontent" class=".pagecontent">
-<?php endif; ?>
+<?php endif; ?>

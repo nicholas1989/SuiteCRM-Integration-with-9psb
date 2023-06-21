@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2023-05-24 15:02:59
+<?php /* Smarty version 2.6.33, created on 2023-06-20 18:52:42
          compiled from custom/themes/SuiteP/include/EditView/actions_buttons.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_button', 'custom/themes/SuiteP/include/EditView/actions_buttons.tpl', 4, false),array('function', 'sugar_action_menu', 'custom/themes/SuiteP/include/EditView/actions_buttons.tpl', 18, false),)), $this); ?>

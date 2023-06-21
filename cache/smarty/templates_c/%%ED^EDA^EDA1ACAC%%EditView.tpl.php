@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2023-05-24 15:08:49
+<?php /* Smarty version 2.6.33, created on 2023-06-20 18:43:28
          compiled from include/SugarFields/Fields/Bool/EditView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugarvar', 'include/SugarFields/Fields/Bool/EditView.tpl', 42, false),)), $this); ?>
@@ -65,4 +65,4 @@ value="1" title='<?php echo $this->_tpl_vars['vardef']['help']; ?>
 " <?php if (! empty ( $this->_tpl_vars['displayParams']['accesskey'] )): ?> accesskey='<?php echo $this->_tpl_vars['displayParams']['accesskey']; ?>
 ' <?php endif; ?>
 {$checked} <?php echo $this->_tpl_vars['displayParams']['field']; ?>
->
+>
