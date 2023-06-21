@@ -344,15 +344,21 @@ table.footable-editing.footable-editing-always-show button.footable-add {
 
 
 /* Custom style added by Gabriel J. */
+
+/* 
+The code below affects custom/modules/Contacts/views/view.detail.php
+and The code below affects custom/modules/Accounts/views/view.detail.php
+*/
 .custom-card-container{
-  width: 100wv; 
-  height: 100hv; 
-  background-color: #ffffff; 
+  width: 100wv;
+  height: 100hv;
+  background-color: #ffffff;
   font-size: 14px;
   color: #534d64;
   text-align: left;
   vertical-align: baseline;
   padding: 5%;
+  border-radius: 5px;
 }
 .custom-inner-card-container{
   width: 50%; 

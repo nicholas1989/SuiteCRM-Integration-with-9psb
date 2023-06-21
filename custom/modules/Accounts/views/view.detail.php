@@ -1,9 +1,9 @@
 <?php
 
-require_once 'modules/Contacts/views/view.detail.php';
+require_once 'modules/Accounts/views/view.detail.php';
 
 
-class CustomContactsViewDetail extends ContactsViewDetail
+class CustomAccountsViewDetail extends AccountsViewDetail
 {
 
 
@@ -131,7 +131,7 @@ class CustomContactsViewDetail extends ContactsViewDetail
                 </div>
                 <div class="custom-inner-card-container">
                     <div class="custom-inner-row">
-                        <label>Account Number: </label> <p class="custom-paragraph">'.$customer->customerAccountNumber.'</p>
+                        <label>Account Number:</label> <p class="custom-paragraph">'.$customer->customerAccountNumber.'</p>
                     </div>
                     <div class="custom-inner-row">
                         <label>D.O.B: </label><p class="custom-paragraph">'.$customer->dateOfBirth.'</p>
@@ -168,93 +168,97 @@ class CustomContactsViewDetail extends ContactsViewDetail
             <div class="custom-card-header">
                 <h3>Last Five(5) Transactions</h3>
             </div>';
-            foreach ($customer->lastFiveTransactions as $transaction) 
-            {
-                // var_dump($transaction->balance);
-                $template .='
-                <div class="custom-row">
-                    <div class="custom-inner-card-container">
-                        <div class="custom-inner-row">
-                            <label>Balance: </label><p class="custom-paragraph">'.$transaction->balance.'</p>
+           if(strlen($customer->llastFiveTransactionsast) > 0){
+                foreach ($customer->lastFiveTransactions as $transaction) 
+                {
+                    // var_dump($transaction->balance);
+                    $template .='
+                    <div class="custom-row">
+                        <div class="custom-inner-card-container">
+                            <div class="custom-inner-row">
+                                <label>Balance: </label><p class="custom-paragraph">'.$transaction->balance.'</p>
+                            </div>
+                            <div class="custom-inner-row">
+                                <label>Reversal ReferenceNo: </label><p class="custom-paragraph">'.$transaction->reversalReferenceNo.'</p>
+                            </div>
                         </div>
-                        <div class="custom-inner-row">
-                            <label>Reversal ReferenceNo: </label><p class="custom-paragraph">'.$transaction->reversalReferenceNo.'</p>
-                        </div>
-                    </div>
-                    <div class="custom-inner-card-container">
-                        <div class="custom-inner-row">
-                            <label>UniqueIdentifier:</label> <p class="custom-paragraph">'.$transaction->uniqueIdentifier.'</p>
-                        </div>
-                        <div class="custom-inner-row">
-                            <label>Transaction Date: </label><p class="custom-paragraph">'.$transaction->transactionDateString.'</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="custom-row">
-                    <div class="custom-inner-card-container">
-                        <div class="custom-inner-row">
-                            <label>Posting Type: </label><p class="custom-paragraph">'.$transaction->postingType.'</p>
-                        </div>
-                        <div class="custom-inner-row">
-                            <label>Debit: </label><p class="custom-paragraph">'.$transaction->debit.'</p>
+                        <div class="custom-inner-card-container">
+                            <div class="custom-inner-row">
+                                <label>UniqueIdentifier:</label> <p class="custom-paragraph">'.$transaction->uniqueIdentifier.'</p>
+                            </div>
+                            <div class="custom-inner-row">
+                                <label>Transaction Date: </label><p class="custom-paragraph">'.$transaction->transactionDateString.'</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="custom-inner-card-container">
-                        <div class="custom-inner-row">
-                            <label>Credit:</label> <p class="custom-paragraph">'.$transaction->credit.'</p>
+
+
+                    <div class="custom-row">
+                        <div class="custom-inner-card-container">
+                            <div class="custom-inner-row">
+                                <label>Posting Type: </label><p class="custom-paragraph">'.$transaction->postingType.'</p>
+                            </div>
+                            <div class="custom-inner-row">
+                                <label>Debit: </label><p class="custom-paragraph">'.$transaction->debit.'</p>
+                            </div>
                         </div>
-                        <div class="custom-inner-row">
-                            <label>InstrumentNo: </label><p class="custom-paragraph">'.$transaction->instrumentNo.'</p>
+                        <div class="custom-inner-card-container">
+                            <div class="custom-inner-row">
+                                <label>Credit:</label> <p class="custom-paragraph">'.$transaction->credit.'</p>
+                            </div>
+                            <div class="custom-inner-row">
+                                <label>InstrumentNo: </label><p class="custom-paragraph">'.$transaction->instrumentNo.'</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <div class="custom-row">
-                    <div class="custom-inner-card-container">
-                        <div class="custom-inner-row">
-                            <label>Record Type: </label><p class="custom-paragraph">'.$transaction->recordType.'</p>
+                    <div class="custom-row">
+                        <div class="custom-inner-card-container">
+                            <div class="custom-inner-row">
+                                <label>Record Type: </label><p class="custom-paragraph">'.$transaction->recordType.'</p>
+                            </div>
+                            <div class="custom-inner-row">
+                                <label>Current Date: </label><p class="custom-paragraph">'.$transaction->currentDate.'</p>
+                            </div>
                         </div>
-                        <div class="custom-inner-row">
-                            <label>Current Date: </label><p class="custom-paragraph">'.$transaction->currentDate.'</p>
+                        <div class="custom-inner-card-container">
+                            <div class="custom-inner-row">
+                                <label>Account Number:</label> <p class="custom-paragraph">'.$transaction->accountNumber.'</p>
+                            </div>
+                            <div class="custom-inner-row">
+                                <label>ReferenceID: </label><p class="custom-paragraph">'.$transaction->referenceID.'</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="custom-inner-card-container">
-                        <div class="custom-inner-row">
-                            <label>Account Number:</label> <p class="custom-paragraph">'.$transaction->accountNumber.'</p>
+
+
+                    <div class="custom-row">
+                        <div class="custom-inner-card-container">
+                            <div class="custom-inner-row">
+                                <label>Amount: </label><p class="custom-paragraph">'.$transaction->amount.'</p>
+                            </div>
+                            <div class="custom-inner-row">
+                                <label>Narration: </label><p class="custom-paragraph">'.$transaction->narration.'</p>
+                            </div>
                         </div>
-                        <div class="custom-inner-row">
-                            <label>ReferenceID: </label><p class="custom-paragraph">'.$transaction->referenceID.'</p>
+                        <div class="custom-inner-card-container">
+                            <div class="custom-inner-row">
+                                <label>Reversed: </label><p class="custom-paragraph">'.$transaction->reversed.'</p>
+                            </div>
+                            <div class="custom-inner-row">
+                                <label>Card Transation: </label><p class="custom-paragraph">'.$transaction->cardTransation.'</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <div class="custom-row">
-                    <div class="custom-inner-card-container">
-                        <div class="custom-inner-row">
-                            <label>Amount: </label><p class="custom-paragraph">'.$transaction->amount.'</p>
-                        </div>
-                        <div class="custom-inner-row">
-                            <label>Narration: </label><p class="custom-paragraph">'.$transaction->narration.'</p>
-                        </div>
-                    </div>
-                    <div class="custom-inner-card-container">
-                        <div class="custom-inner-row">
-                            <label>Reversed: </label><p class="custom-paragraph">'.$transaction->reversed.'</p>
-                        </div>
-                        <div class="custom-inner-row">
-                            <label>Card Transation: </label><p class="custom-paragraph">'.$transaction->cardTransation.'</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <hr style="border-bottom: 1px solid #534d64; width: 100%;"/>
-                ';
-            }
+                    <hr style="border-bottom: 1px solid #534d64; width: 100%;"/>
+                    ';
+                }
+           }else{
+            $template .= '<h3 class="custom-error-text">No recent transaction record to display.</h3>';
+           }
 
         }else{
             $template .= '<h3 class="custom-error-text">'.$customer->message.'</h3>';
@@ -266,10 +270,5 @@ class CustomContactsViewDetail extends ContactsViewDetail
     }
 
 }
-
-
-
-
-
 
 
