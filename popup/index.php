@@ -6,7 +6,7 @@
     // $mobile = $mobile; 
 try{ 
     $pdo = new PDO("mysql:host=localhost; 
-                    dbname=db_psb", "root", "Password123"); 
+                    dbname=db_psb", "root", ""); 
     $pdo->setAttribute(PDO::ATTR_ERRMODE,  
                         PDO::ERRMODE_EXCEPTION); 
 } catch(PDOException $e){ 

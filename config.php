@@ -126,7 +126,7 @@ $sugar_config = array (
     'db_host_instance' => 'SQLEXPRESS',
     'db_user_name' => 'root',
 <<<<<<< HEAD
-    'db_password' => 'Password123',
+    'db_password' => '',
 =======
     'db_password' => '',
     // 'db_password' => 'Interra123!',
