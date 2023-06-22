@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 15:04:24
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-22 07:44:16
+>>>>>>> binary
          compiled from custom/themes/SuiteP/modules/Users/tpls/DetailView-advanced-tab-content.tpl */ ?>
 {*
 advanced tab content goes here

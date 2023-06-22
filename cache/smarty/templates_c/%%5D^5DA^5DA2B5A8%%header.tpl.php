@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-20 09:05:53
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-20 18:52:42
+>>>>>>> binary
          compiled from custom/themes%5CSuiteP%5Cinclude/EditView/header.tpl */ ?>
 {*
 /**

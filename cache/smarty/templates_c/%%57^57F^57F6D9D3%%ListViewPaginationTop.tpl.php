@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-20 09:07:20
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-20 18:43:31
+>>>>>>> binary
          compiled from custom/themes/SuiteP/include/ListView/ListViewPaginationTop.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_action_menu', 'custom/themes/SuiteP/include/ListView/ListViewPaginationTop.tpl', 74, false),)), $this); ?>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 15:04:26
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-22 07:44:16
+>>>>>>> binary
          compiled from cache/themes/SuiteP/modules/Users/DetailView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'cache/themes/SuiteP/modules/Users/DetailView.tpl', 40, false),array('function', 'sugar_translate', 'cache/themes/SuiteP/modules/Users/DetailView.tpl', 60, false),array('function', 'counter', 'cache/themes/SuiteP/modules/Users/DetailView.tpl', 136, false),array('function', 'sugar_phone', 'cache/themes/SuiteP/modules/Users/DetailView.tpl', 879, false),array('function', 'sugar_getjspath', 'cache/themes/SuiteP/modules/Users/DetailView.tpl', 1433, false),array('modifier', 'strip_semicolon', 'cache/themes/SuiteP/modules/Users/DetailView.tpl', 129, false),array('modifier', 'escape', 'cache/themes/SuiteP/modules/Users/DetailView.tpl', 1402, false),array('modifier', 'url2html', 'cache/themes/SuiteP/modules/Users/DetailView.tpl', 1402, false),array('modifier', 'nl2br', 'cache/themes/SuiteP/modules/Users/DetailView.tpl', 1402, false),)), $this); ?>

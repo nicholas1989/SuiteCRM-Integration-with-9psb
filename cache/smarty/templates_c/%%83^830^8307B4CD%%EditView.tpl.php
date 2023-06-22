@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-20 09:05:59
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-20 19:29:50
+>>>>>>> binary
          compiled from include/SugarFields/Fields/Dynamicenum/EditView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugarvar', 'include/SugarFields/Fields/Dynamicenum/EditView.tpl', 43, false),)), $this); ?>

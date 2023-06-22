@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 14:54:26
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-22 07:44:00
+>>>>>>> binary
          compiled from modules/Emails/templates/emailSettings.tpl */ ?>
 
 <div class="ydlg-bd">

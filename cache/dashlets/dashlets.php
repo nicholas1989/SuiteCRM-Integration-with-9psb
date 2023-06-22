@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 // created: 2023-06-19 14:52:33
+=======
+// created: 2023-06-20 15:11:19
+>>>>>>> binary
 $dashletsFiles = array (
   'MyAccountsDashlet' => 
   array (

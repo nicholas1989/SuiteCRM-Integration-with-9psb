@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 15:04:13
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-20 18:46:03
+>>>>>>> binary
          compiled from include/SugarEmailAddress/templates/forDetailView.tpl */ ?>
 
 			<table cellpadding="0" cellspacing="0" border="0" width="100%">

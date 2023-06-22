@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 15:04:17
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-20 17:20:22
+>>>>>>> binary
          compiled from custom/themes%5CSuiteP%5Cinclude/DetailView/header.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', 'custom/themes\\SuiteP\\include/DetailView/header.tpl', 89, false),)), $this); ?>

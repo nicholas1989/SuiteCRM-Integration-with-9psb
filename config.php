@@ -125,7 +125,12 @@ $sugar_config = array (
     'db_host_name' => 'localhost',
     'db_host_instance' => 'SQLEXPRESS',
     'db_user_name' => 'root',
+<<<<<<< HEAD
     'db_password' => 'Password123',
+=======
+    'db_password' => '',
+    // 'db_password' => 'Interra123!',
+>>>>>>> binary
     // 'db_name' => 'psboauth_db',
     'db_name' => 'db_psb',
     'db_type' => 'mysql',

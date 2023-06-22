@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 14:54:25
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-22 07:44:00
+>>>>>>> binary
          compiled from modules/Emails/templates/_baseConfigData.tpl */ ?>
 
 SUGAR.email2.composeLayout.charsets = <?php echo $this->_tpl_vars['emailCharsets']; ?>

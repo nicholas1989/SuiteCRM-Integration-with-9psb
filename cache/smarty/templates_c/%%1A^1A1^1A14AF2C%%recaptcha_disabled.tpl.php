@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 14:32:18
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-20 09:19:16
+>>>>>>> binary
          compiled from C:%5Cwamp64%5Cwww%5Cpsb%5Cinclude%5Cutils/recaptcha_disabled.tpl */ ?>
 <?php echo '
 <script>

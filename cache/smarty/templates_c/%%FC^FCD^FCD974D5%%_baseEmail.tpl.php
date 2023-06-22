@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 14:54:24
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-22 07:44:00
+>>>>>>> binary
          compiled from modules/Users/_baseEmail.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_getjspath', 'modules/Users/_baseEmail.tpl', 42, false),)), $this); ?>

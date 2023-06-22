@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 14:54:33
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-22 07:44:02
+>>>>>>> binary
          compiled from modules/Emails/templates/outboundDialogTest.tpl */ ?>
 <div id="testOutbound">
 		<table  border="0" cellspacing="0" cellpadding="0" class="edit view">

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 14:54:28
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-22 07:44:01
+>>>>>>> binary
          compiled from modules/Emails/templates/outboundDialog.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_translate', 'modules/Emails/templates/outboundDialog.tpl', 60, false),)), $this); ?>

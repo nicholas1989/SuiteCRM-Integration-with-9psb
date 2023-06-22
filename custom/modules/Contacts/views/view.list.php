@@ -19,7 +19,7 @@ class CustomContactsViewList extends ContactsViewList{
     private function getNewActionMenuItem(){
         global $mod_strings;
         return '<a id="bv_mass_whatsapp" onclick="return listviewmasswhatsapp()">BV Mass WhatsApp</a>';
+    }
 
     
-    }
 }

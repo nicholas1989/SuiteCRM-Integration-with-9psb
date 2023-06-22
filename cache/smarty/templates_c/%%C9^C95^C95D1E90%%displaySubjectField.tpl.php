@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-20 09:07:58
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-20 17:20:26
+>>>>>>> binary
          compiled from modules/Emails/templates/displaySubjectField.tpl */ ?>
 <div class="email-subject">
     <?php if ($this->_tpl_vars['bean']): ?>

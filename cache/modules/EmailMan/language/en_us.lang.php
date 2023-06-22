@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 // created: 2023-06-19 14:54:32
+=======
+// created: 2023-06-22 07:44:01
+>>>>>>> binary
 $mod_strings = array (
   'LBL_SEND_DATE_TIME' => 'Send Date',
   'LBL_IN_QUEUE' => 'In Process',

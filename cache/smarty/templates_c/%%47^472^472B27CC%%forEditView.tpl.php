@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 14:54:19
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-20 11:29:41
+>>>>>>> binary
          compiled from include/SugarEmailAddress/templates/forEditView.tpl */ ?>
 <?php 
 global $emailInstances;

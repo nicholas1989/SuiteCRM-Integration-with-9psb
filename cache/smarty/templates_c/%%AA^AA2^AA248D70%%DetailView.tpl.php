@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-20 09:07:40
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-20 17:20:21
+>>>>>>> binary
          compiled from custom/themes%5CSuiteP%5Cinclude/DetailView/DetailView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'custom/themes\\SuiteP\\include/DetailView/DetailView.tpl', 42, false),array('function', 'counter', 'custom/themes\\SuiteP\\include/DetailView/DetailView.tpl', 47, false),array('modifier', 'upper', 'custom/themes\\SuiteP\\include/DetailView/DetailView.tpl', 52, false),)), $this); ?>

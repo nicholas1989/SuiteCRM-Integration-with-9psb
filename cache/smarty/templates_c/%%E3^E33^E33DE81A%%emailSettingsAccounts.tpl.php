@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 14:54:27
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-22 07:44:01
+>>>>>>> binary
          compiled from modules/Emails/templates/emailSettingsAccounts.tpl */ ?>
 <table cellpadding="4" cellspacing="0" border="0" width="100%" class="view">
 	<tr>

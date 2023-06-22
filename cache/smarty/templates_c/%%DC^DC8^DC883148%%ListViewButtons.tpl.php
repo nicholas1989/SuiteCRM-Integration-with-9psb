@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-20 09:07:22
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-20 18:43:31
+>>>>>>> binary
          compiled from include/ListView/ListViewButtons.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', 'include/ListView/ListViewButtons.tpl', 4, false),array('function', 'eval', 'include/ListView/ListViewButtons.tpl', 7, false),)), $this); ?>

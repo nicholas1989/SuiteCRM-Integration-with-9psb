@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.33, created on 2023-06-19 14:54:27
+=======
+<?php /* Smarty version 2.6.33, created on 2023-06-22 07:44:01
+>>>>>>> binary
          compiled from modules/Emails/templates/emailSettingsAccountDetails.tpl */ ?>
 <?php echo $this->_tpl_vars['rollover']; ?>
 
