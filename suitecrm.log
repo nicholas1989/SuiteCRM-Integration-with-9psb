@@ -1,0 +1,5 @@
+Thu Jun 22 07:44:01 2023 [8088][1][FATAL] Mysqli_query failed.
+Thu Jun 22 07:44:01 2023 [8088][1][FATAL]  Query Failed: SELECT * FROM fields_meta_data WHERE  custom_module='EmailMan' AND  deleted = 0: MySQL error 1146: Table 'db_psb.fields_meta_data' doesn't exist
+Thu Jun 22 07:44:14 2023 [8088][1][FATAL] OAuthAuthorizationService::hasConnectionTokenExpired | Access token has expired
+Thu Jun 22 07:44:14 2023 [8088][1][FATAL] Exception handling in C:\wamp64\www\psb\include\MVC\Controller\SugarController.php:397
+Thu Jun 22 07:44:14 2023 [8088][1][FATAL] Exception in Controller: cURL error 6: Could not resolve host: login.microsoftonline.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://login.microsoftonline.com/4ab80ab2-712d-49b3-83b1-46c532dcab11/oauth2/v2.0/token
