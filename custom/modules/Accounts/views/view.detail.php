@@ -6,33 +6,53 @@ require_once 'modules/Accounts/views/view.detail.php';
 class CustomAccountsViewDetail extends AccountsViewDetail
 {
 
-    static public function registerNewCustomer($response, $bean){
-        var_dump($response);
-    }
+    static function registerNewCustomer($response){
 
+        $customerPhoneNumber = $response->mobileNumber;
+
+        $payload = [
+            'phone_office' => $customerPhoneNumber,
+        ];
+
+        $accountsBean = BeanFactory::getBean('Accounts');
+        $getAccountWithPhoneNumber = $accountsBean->retrieve_by_string_fields($payload);
+
+        // var_dump($getAccountWithPhoneNumber->id);
+        // Check accounts table for customer that phone_office match in the database
+        if($getAccountWithPhoneNumber->id == null && strlen($customerPhoneNumber) == 11){
+            echo $customerPhoneNumber;
+            die;
+            // Register customer on the crm
+            
+        }else{
+            // Do something else
+        }
+
+        
+    }
 
     static function fetchCustomerDetail($token){
 
 
-        if(isset($_GET['record']) || isset($_GET['ANI'])){
+        if(isset($_GET['record'])){
 
            if(!empty($_GET['record'])){
                 $userId = $_GET['record'];
-
-                // var_dump($userId);
-
-                $bean = BeanFactory::getBean('Accounts', $userId);
-
-
-                $phone_number = $bean->phone_office;
+                
+                $queryPayload = ['id' => $userId];
+                $accountsBean = BeanFactory::getBean('Accounts');
+                $getCustomerPhoneNumber = $accountsBean->retrieve_by_string_fields($queryPayload);
+                
+                // var_dump($getCustomerPhoneNumber->phone_office);
 
                 $ch = curl_init();
                 $customer_details_url = 'http://102.216.128.75:9090/customer-account-details/api/v1/customer-details';
             
                 // $accountNo = '06630381010001142'; // Test_Phone_number: 07037415745; test_accountNo: 06630381010001142
-            
+                // 08134943416
+
                 $payload = json_encode([
-                    'accountNo' => $phone_number,
+                    'accountNo' => $getCustomerPhoneNumber->phone_office,
                 ]);
             
                 $headers = [
@@ -58,48 +78,10 @@ class CustomAccountsViewDetail extends AccountsViewDetail
                 $response = json_decode($data, false);
 
 
-                self::registerNewCustomer($response, $bean);
+                self::registerNewCustomer($response, $accountsBean);
             
                 return $response;
 
-           }else if($_GET['ANI']){
-                $userId = $_GET['ANI'];
-                $bean = BeanFactory::getBean('Accounts', $userId);
-                $phone_number = $bean->phone_office;
-
-
-                $ch = curl_init();
-                $customer_details_url = 'http://102.216.128.75:9090/customer-account-details/api/v1/customer-details';
-            
-                // $accountNo = '06630381010001142'; // Test_Phone_number: 07037415745; test_accountNo: 06630381010001142
-            
-                $payload = json_encode([
-                    'accountNo' => $phone_number,
-                ]);
-            
-                $headers = [
-                    'Content-type: application/json; charset=utf-8',
-                    'Accept-language: en',
-                    'Authorization: Bearer '.$token
-                ];
-            
-                // var_dump($headers);
-                // exit;
-            
-                curl_setopt_array($ch, [
-                    CURLOPT_URL => $customer_details_url,
-                    CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_CUSTOMREQUEST => 'POST',
-                    CURLOPT_HTTPHEADER => $headers,
-                    CURLOPT_POSTFIELDS => $payload
-                ]);
-            
-                $data = curl_exec($ch);
-                curl_close($ch);
-            
-                $response = json_decode($data, false);
-            
-                return $response;
            }else{
             echo 'Empty params provided.';
            }
@@ -161,19 +143,16 @@ class CustomAccountsViewDetail extends AccountsViewDetail
 
         $customer = self::generateAuthToken();
         $template = '';
+        $error = '';
         // var_dump($customer->lastFiveTransactions);
-        var_dump($customer);
-
+        // var_dump($customer);
       
-        $template .= '
-            <div class="custom-card-container">
-            <div class="custom-card-header">
-                <h3>Customer Account Info</h3>
-            </div>
-        ';
+        $template .='<div class="custom-card-container">
+                        <div class="custom-card-header">
+                            <h3>Customer Account Info</h3>
+                    </div>';
 
         if($customer->status !== 'Failed'){
-
             $template .='
             <div class="custom-row">
                 <div class="custom-inner-card-container">
@@ -225,7 +204,6 @@ class CustomAccountsViewDetail extends AccountsViewDetail
             </div>';
             foreach ($customer->lastFiveTransactions as $transaction) 
             {
-                // var_dump($transaction->balance);
                 $template .='
                 <div class="custom-row">
                     <div class="custom-inner-card-container">
@@ -307,15 +285,16 @@ class CustomAccountsViewDetail extends AccountsViewDetail
                 </div>
 
 
-                <hr style="border-bottom: 1px solid #534d64; width: 100%;"/>
-                ';
+                <hr style="border-bottom: 1px solid #534d64; width: 100%;"/>';
             }
 
         }else{
             $template .= '<h3 class="custom-error-text">'.$customer->message.'</h3>';
         }
+
         $template .= '</div>';
         echo $template;
+
     }
 
 }
