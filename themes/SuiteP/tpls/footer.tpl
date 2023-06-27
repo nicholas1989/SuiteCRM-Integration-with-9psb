@@ -43,6 +43,10 @@
 <!-- END of container-fluid, pageContainer divs -->
 <!-- Start Footer Section -->
 {if $AUTHENTICATED}
+
+    <div>
+        <h1>Hollo Footer</h1>
+    </div>
     <!-- Start generic footer -->
     <footer>
         <div id="copyright_data" class="footer_left">

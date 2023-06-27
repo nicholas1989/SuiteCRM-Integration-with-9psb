@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.33, created on 2023-06-26 09:26:32
-         compiled from include/SugarFields/Fields/Bool/EditView.tpl */ ?>
+<?php /* Smarty version 2.6.33, created on 2023-06-27 05:52:21
+         compiled from include/SugarFields/Fields/Enum/SearchView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'sugarvar', 'include/SugarFields/Fields/Bool/EditView.tpl', 42, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'include/SugarFields/Fields/Enum/SearchView.tpl', 42, false),array('function', 'sugarvar', 'include/SugarFields/Fields/Enum/SearchView.tpl', 43, false),)), $this); ?>
 {*
 /**
  *
@@ -43,26 +43,11 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'sugarvar', 
  */
 
 *}
-{if strval(<?php echo smarty_function_sugarvar(array('key' => 'value','stringFormat' => 'false'), $this);?>
-) == "1" || strval(<?php echo smarty_function_sugarvar(array('key' => 'value','stringFormat' => 'false'), $this);?>
-) == "yes" || strval(<?php echo smarty_function_sugarvar(array('key' => 'value','stringFormat' => 'false'), $this);?>
-) == "on"} 
-{assign var="checked" value='checked="checked"'}
-{else}
-{assign var="checked" value=""}
-{/if}
-<input type="hidden" name="<?php if (empty ( $this->_tpl_vars['displayParams']['idName'] )): ?><?php echo smarty_function_sugarvar(array('key' => 'name'), $this);?>
-<?php else: ?><?php echo $this->_tpl_vars['displayParams']['idName']; ?>
-<?php endif; ?>" value="0"> 
-<input type="checkbox" id="<?php if (empty ( $this->_tpl_vars['displayParams']['idName'] )): ?><?php echo smarty_function_sugarvar(array('key' => 'name'), $this);?>
-<?php else: ?><?php echo $this->_tpl_vars['displayParams']['idName']; ?>
-<?php endif; ?>" 
-name="<?php if (empty ( $this->_tpl_vars['displayParams']['idName'] )): ?><?php echo smarty_function_sugarvar(array('key' => 'name'), $this);?>
-<?php else: ?><?php echo $this->_tpl_vars['displayParams']['idName']; ?>
-<?php endif; ?>" 
-value="1" title='<?php echo $this->_tpl_vars['vardef']['help']; ?>
-' tabindex="<?php echo $this->_tpl_vars['tabindex']; ?>
-" <?php if (! empty ( $this->_tpl_vars['displayParams']['accesskey'] )): ?> accesskey='<?php echo $this->_tpl_vars['displayParams']['accesskey']; ?>
-' <?php endif; ?>
-{$checked} <?php echo $this->_tpl_vars['displayParams']['field']; ?>
->
+<?php ob_start(); ?><?php echo ((is_array($_tmp=@$this->_tpl_vars['displayParams']['size'])) ? $this->_run_mod_handler('default', true, $_tmp, 6) : smarty_modifier_default($_tmp, 6)); ?>
+<?php $this->_smarty_vars['capture']['display_size'] = ob_get_contents();  $this->assign('size', ob_get_contents());ob_end_clean(); ?>
+{html_options id='<?php echo $this->_tpl_vars['vardef']['name']; ?>
+' name='<?php echo $this->_tpl_vars['vardef']['name']; ?>
+[]' options=<?php echo smarty_function_sugarvar(array('key' => 'options','string' => true), $this);?>
+ size="<?php echo $this->_tpl_vars['size']; ?>
+" class="templateGroupChooser" <?php if ($this->_tpl_vars['size'] > 1): ?>multiple="1"<?php endif; ?> selected=<?php echo smarty_function_sugarvar(array('key' => 'value','string' => true), $this);?>
+}

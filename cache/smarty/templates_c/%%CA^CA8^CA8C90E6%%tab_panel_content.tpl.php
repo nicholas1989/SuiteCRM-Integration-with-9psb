@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2023-06-22 15:51:43
+<?php /* Smarty version 2.6.33, created on 2023-06-27 05:53:10
          compiled from custom/themes/SuiteP/include/DetailView/tab_panel_content.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', 'custom/themes/SuiteP/include/DetailView/tab_panel_content.tpl', 52, false),array('function', 'sugar_evalcolumn', 'custom/themes/SuiteP/include/DetailView/tab_panel_content.tpl', 146, false),array('function', 'sugar_field', 'custom/themes/SuiteP/include/DetailView/tab_panel_content.tpl', 152, false),)), $this); ?>

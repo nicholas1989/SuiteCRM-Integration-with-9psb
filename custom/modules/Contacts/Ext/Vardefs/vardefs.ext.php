@@ -15,13 +15,6 @@ $dictionary["Contact"]["fields"]["rls_scheduling_reports_contacts"] = array (
 
 
 
-$dictionary['Contact']['fields']['dt_twitter_profile_image']['name'] = 'dt_twitter_profile_image';
-$dictionary['Contact']['fields']['dt_twitter_profile_image']['vname'] = 'LBL_DT_TWITTER_PROFILE_IMAGE';
-$dictionary['Contact']['fields']['dt_twitter_profile_image']['type'] = 'varchar';
-$dictionary['Contact']['fields']['dt_twitter_profile_image']['link_target'] = '_blank';
-
-
-
 $dictionary['Contact']['fields']['dt_twitter_description']['name'] = 'dt_twitter_description';
 $dictionary['Contact']['fields']['dt_twitter_description']['vname'] = 'LBL_DT_TWITTER_DESCRIPTION';
 $dictionary['Contact']['fields']['dt_twitter_description']['type'] = 'text';
@@ -36,9 +29,22 @@ $dictionary['Contact']['fields']['dt_twitter_id']['link_target'] = '_blank';
 
 
 
+$dictionary['Contact']['fields']['dt_twitter_location']['name'] = 'dt_twitter_location';
+$dictionary['Contact']['fields']['dt_twitter_location']['vname'] = 'LBL_DT_TWITTER_LOCATION';
+$dictionary['Contact']['fields']['dt_twitter_location']['type'] = 'varchar';
+
+
+
 $dictionary['Contact']['fields']['dt_twitter_name']['name'] = 'dt_twitter_name';
 $dictionary['Contact']['fields']['dt_twitter_name']['vname'] = 'LBL_DT_TWITTER_NAME';
 $dictionary['Contact']['fields']['dt_twitter_name']['type'] = 'varchar';
+
+
+
+$dictionary['Contact']['fields']['dt_twitter_profile_image']['name'] = 'dt_twitter_profile_image';
+$dictionary['Contact']['fields']['dt_twitter_profile_image']['vname'] = 'LBL_DT_TWITTER_PROFILE_IMAGE';
+$dictionary['Contact']['fields']['dt_twitter_profile_image']['type'] = 'varchar';
+$dictionary['Contact']['fields']['dt_twitter_profile_image']['link_target'] = '_blank';
 
 
 
@@ -47,11 +53,37 @@ $dictionary['Contact']['fields']['dt_twitter_screen_name']['vname'] = 'LBL_DT_TW
 $dictionary['Contact']['fields']['dt_twitter_screen_name']['type'] = 'varchar';
 
 
+ // created: 2022-03-04 11:28:28
+$dictionary['Contact']['fields']['account_number_c']['inline_edit']='1';
+$dictionary['Contact']['fields']['account_number_c']['labelValue']='Account Number';
 
-$dictionary['Contact']['fields']['dt_twitter_location']['name'] = 'dt_twitter_location';
-$dictionary['Contact']['fields']['dt_twitter_location']['vname'] = 'LBL_DT_TWITTER_LOCATION';
-$dictionary['Contact']['fields']['dt_twitter_location']['type'] = 'varchar';
+ 
 
+ // created: 2022-02-17 10:15:01
+$dictionary['Contact']['fields']['agent_type_c']['inline_edit']='1';
+$dictionary['Contact']['fields']['agent_type_c']['labelValue']='Agent Type';
+
+ 
+
+ // created: 2022-02-16 10:35:11
+$dictionary['Contact']['fields']['jjwg_maps_address_c']['inline_edit']=1;
+
+ 
+
+ // created: 2022-02-16 10:35:11
+$dictionary['Contact']['fields']['jjwg_maps_geocode_status_c']['inline_edit']=1;
+
+ 
+
+ // created: 2022-02-16 10:35:10
+$dictionary['Contact']['fields']['jjwg_maps_lat_c']['inline_edit']=1;
+
+ 
+
+ // created: 2022-02-16 10:35:10
+$dictionary['Contact']['fields']['jjwg_maps_lng_c']['inline_edit']=1;
+
+ 
 
  // created: 2022-02-17 08:57:24
 
@@ -70,38 +102,6 @@ $dictionary['Contact']['fields']['phone_mobile']['merge_filter']='disabled';
 
  
 
- // created: 2022-02-16 10:35:11
-$dictionary['Contact']['fields']['jjwg_maps_address_c']['inline_edit']=1;
-
- 
-
- // created: 2022-02-17 10:13:30
-$dictionary['Contact']['fields']['state_c']['inline_edit']='1';
-$dictionary['Contact']['fields']['state_c']['labelValue']='Agent State';
-
- 
-
- // created: 2022-02-16 10:35:10
-$dictionary['Contact']['fields']['jjwg_maps_lat_c']['inline_edit']=1;
-
- 
-
- // created: 2022-02-16 10:35:11
-$dictionary['Contact']['fields']['jjwg_maps_geocode_status_c']['inline_edit']=1;
-
- 
-
- // created: 2022-02-16 10:35:10
-$dictionary['Contact']['fields']['jjwg_maps_lng_c']['inline_edit']=1;
-
- 
-
- // created: 2022-03-04 11:28:28
-$dictionary['Contact']['fields']['account_number_c']['inline_edit']='1';
-$dictionary['Contact']['fields']['account_number_c']['labelValue']='Account Number';
-
- 
-
  // created: 2022-03-04 11:23:23
 $dictionary['Contact']['fields']['slp_name_c']['inline_edit']='1';
 $dictionary['Contact']['fields']['slp_name_c']['labelValue']='Slp name';
@@ -114,9 +114,9 @@ $dictionary['Contact']['fields']['slp_phone_c']['labelValue']='Slp Phone';
 
  
 
- // created: 2022-02-17 10:15:01
-$dictionary['Contact']['fields']['agent_type_c']['inline_edit']='1';
-$dictionary['Contact']['fields']['agent_type_c']['labelValue']='Agent Type';
+ // created: 2022-02-17 10:13:30
+$dictionary['Contact']['fields']['state_c']['inline_edit']='1';
+$dictionary['Contact']['fields']['state_c']['labelValue']='Agent State';
 
  
 ?>

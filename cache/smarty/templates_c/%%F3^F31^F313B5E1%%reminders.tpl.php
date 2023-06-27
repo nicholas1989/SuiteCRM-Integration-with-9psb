@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2023-06-22 15:51:46
+<?php /* Smarty version 2.6.33, created on 2023-06-27 05:53:13
          compiled from modules/Reminders/tpls/reminders.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'html_options', 'modules/Reminders/tpls/reminders.tpl', 82, false),)), $this); ?>

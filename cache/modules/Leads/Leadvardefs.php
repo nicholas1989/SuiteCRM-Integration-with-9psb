@@ -1268,13 +1268,6 @@
         'listview' => false,
       ),
     ),
-    'dt_twitter_profile_image' => 
-    array (
-      'name' => 'dt_twitter_profile_image',
-      'vname' => 'LBL_DT_TWITTER_PROFILE_IMAGE',
-      'type' => 'varchar',
-      'link_target' => '_blank',
-    ),
     'dt_twitter_description' => 
     array (
       'name' => 'dt_twitter_description',
@@ -1289,22 +1282,29 @@
       'dbType' => 'varchar',
       'link_target' => '_blank',
     ),
+    'dt_twitter_location' => 
+    array (
+      'name' => 'dt_twitter_location',
+      'vname' => 'LBL_DT_TWITTER_LOCATION',
+      'type' => 'varchar',
+    ),
     'dt_twitter_name' => 
     array (
       'name' => 'dt_twitter_name',
       'vname' => 'LBL_DT_TWITTER_NAME',
       'type' => 'varchar',
     ),
+    'dt_twitter_profile_image' => 
+    array (
+      'name' => 'dt_twitter_profile_image',
+      'vname' => 'LBL_DT_TWITTER_PROFILE_IMAGE',
+      'type' => 'varchar',
+      'link_target' => '_blank',
+    ),
     'dt_twitter_screen_name' => 
     array (
       'name' => 'dt_twitter_screen_name',
       'vname' => 'LBL_DT_TWITTER_SCREEN_NAME',
-      'type' => 'varchar',
-    ),
-    'dt_twitter_location' => 
-    array (
-      'name' => 'dt_twitter_location',
-      'vname' => 'LBL_DT_TWITTER_LOCATION',
       'type' => 'varchar',
     ),
   ),

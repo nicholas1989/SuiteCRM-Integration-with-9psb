@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2023-06-22 15:51:47
+<?php /* Smarty version 2.6.33, created on 2023-06-27 05:53:14
          compiled from custom/themes%5CSuiteP%5Cinclude/SubPanel/tpls/singletabmenu.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_getimage', 'custom/themes\\SuiteP\\include/SubPanel/tpls/singletabmenu.tpl', 91, false),)), $this); ?>
