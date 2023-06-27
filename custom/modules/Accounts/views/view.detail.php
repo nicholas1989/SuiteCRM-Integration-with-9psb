@@ -2,34 +2,8 @@
 
 require_once 'modules/Accounts/views/view.detail.php';
 
-
 class CustomAccountsViewDetail extends AccountsViewDetail
 {
-
-    static function registerNewCustomer($response){
-
-        $customerPhoneNumber = $response->mobileNumber;
-
-        $payload = [
-            'phone_office' => $customerPhoneNumber,
-        ];
-
-        $accountsBean = BeanFactory::getBean('Accounts');
-        $getAccountWithPhoneNumber = $accountsBean->retrieve_by_string_fields($payload);
-
-        // var_dump($getAccountWithPhoneNumber->id);
-        // Check accounts table for customer that phone_office match in the database
-        if($getAccountWithPhoneNumber->id == null && strlen($customerPhoneNumber) == 11){
-            echo $customerPhoneNumber;
-            die;
-            // Register customer on the crm
-            
-        }else{
-            // Do something else
-        }
-
-        
-    }
 
     static function fetchCustomerDetail($token){
 
@@ -76,10 +50,6 @@ class CustomAccountsViewDetail extends AccountsViewDetail
                 curl_close($ch);
             
                 $response = json_decode($data, false);
-
-
-                self::registerNewCustomer($response, $accountsBean);
-            
                 return $response;
 
            }else{
@@ -91,7 +61,6 @@ class CustomAccountsViewDetail extends AccountsViewDetail
         }
     
     }
-
 
     static function generateAuthToken(){
 
@@ -131,7 +100,7 @@ class CustomAccountsViewDetail extends AccountsViewDetail
         if($write_to_file){
            return self::fetchCustomerDetail($response->jwttoken);
         }else{
-            var_dump('Token auto-generating failed.');
+            echo 'Token auto-generating failed.';
         }
     
     }
