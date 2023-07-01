@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2023-06-27 05:53:14
+<?php /* Smarty version 2.6.33, created on 2023-07-01 20:09:20
          compiled from modules/Emails/templates/displayHasAttachmentField.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_getimagepath', 'modules/Emails/templates/displayHasAttachmentField.tpl', 45, false),)), $this); ?>

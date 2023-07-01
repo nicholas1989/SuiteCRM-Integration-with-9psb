@@ -113,7 +113,7 @@ error_reporting(E_ALL);
     // $mobile = $mobile; 
 try{ 
     $pdo = new PDO("mysql:host=localhost; 
-                    dbname=db_psb", "root", ""); 
+                    dbname=db_9psb", "root", ""); 
     $pdo->setAttribute(PDO::ATTR_ERRMODE,  
                         PDO::ERRMODE_EXCEPTION); 
 } catch(PDOException $e){ 
