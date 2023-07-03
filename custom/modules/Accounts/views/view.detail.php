@@ -15,7 +15,7 @@ class CustomAccountsViewDetail extends AccountsViewDetail
             $accountsBean = BeanFactory::getBean('Accounts');
             $getCustomerPhoneNumber = $accountsBean->retrieve_by_string_fields($queryPayload);
             
-            // var_dump($getCustomerPhoneNumber->phone_office);
+            //var_dump($getCustomerPhoneNumber->phone_office);
 
             $ch = curl_init();
             $customerDetailsUrl = 'http://102.216.128.75:9090/customer-account-details/api/v1/customer-details';
@@ -53,6 +53,7 @@ class CustomAccountsViewDetail extends AccountsViewDetail
             }
 
             $response = json_decode($data, false);
+            var_dump($response);
             
 
             if (!$response) {
@@ -64,6 +65,7 @@ class CustomAccountsViewDetail extends AccountsViewDetail
             }
 
             return $response;
+            
 
         }else{
             throw new Exception('Empty params provided.');
@@ -108,7 +110,7 @@ class CustomAccountsViewDetail extends AccountsViewDetail
         }
     
         $response = json_decode($data, true);
-        //var_dump($response['jwttoken']);
+        var_dump($response['jwttoken']);
 
         if (!$response) {
             throw new Exception('Invalid response while generating authentication token.');
@@ -140,7 +142,7 @@ class CustomAccountsViewDetail extends AccountsViewDetail
 
     public function display()
     {
-        //parent::display();
+        parent::display();
 
         try {
             $tokenFilePath = './token.txt';
